@@ -1,0 +1,706 @@
+@use "../utils/variables";
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-family: Commissioner;
+}
+.main-container {
+  max-width: 1440px;
+  width: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .logo-and-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .cont-img {
+      padding-left: 165px;
+      width: 51%;
+    }
+    .hamburg-menu {
+      display: none;
+    }
+    nav {
+      padding: 56px 0;
+      padding-left: 72px;
+      padding-right: 165px;
+      width: 49%;
+      background-color: variables.$primary--red--cl;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      ul {
+        margin-top: 52px;
+        list-style: none;
+        display: flex;
+        gap: 36px;
+
+        li {
+          height: 90px;
+          width: 40px;
+          a {
+            color: variables.$primary--white--cl;
+            font-weight: 400;
+            line-height: 200%;
+            text-decoration: none;
+          }
+        }
+        li:hover {
+          a {
+            font-weight: 700;
+          }
+        }
+      }
+      button {
+        padding: 22px 43px;
+        color: variables.$primary--white--cl;
+        font-size: 15px;
+        font-weight: 800;
+        background-color: variables.$primary--BG-black--cl;
+      }
+      button:hover {
+        background: #434356;
+      }
+    }
+  }
+  .hero {
+    padding-left: 165px;
+    padding-top: 112px;
+    padding-bottom: 160px;
+    width: 100%;
+    background-image: url(../../images/img-hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    color: variables.$primary--text-black--cl;
+
+    .hero-img {
+      display: none;
+    }
+
+    h1 {
+      max-width: 700px;
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 110%;
+    }
+    p {
+      margin-top: 40px;
+      max-width: 540px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 177.778%;
+    }
+    button {
+      margin-top: 48px;
+      background-color: variables.$primary--red--cl;
+      color: variables.$primary--white--cl;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 25px 40px;
+    }
+    button:hover {
+      background: #ff9393;
+    }
+  }
+}
+.main-content {
+  width: 100%;
+
+  &__sc-design {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    picture {
+      width: 51%;
+    }
+    .connector {
+      width: 135px;
+      position: absolute;
+      margin-top: 230px;
+      margin-left: 30px;
+    }
+
+    &__description {
+      width: 49%;
+      background: variables.$primary--BG-black--cl;
+      color: variables.$primary--white--cl;
+      padding: 200px 0 200px 154px;
+      font-size: 18px;
+
+      h2 {
+        max-width: 400px;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 114.286%;
+
+        span {
+          color: variables.$primary--red--cl;
+        }
+      }
+      p {
+        margin-top: 44px;
+        max-width: 445px;
+        font-weight: 400;
+        line-height: 177.778%;
+      }
+      button {
+        margin-top: 48px;
+        color: variables.$primary--red--cl;
+        font-weight: 800;
+        padding-bottom: 8px;
+        border-bottom: 2px solid currentColor;
+      }
+
+      button:hover {
+        color: #ff9393;
+      }
+    }
+  }
+  &__sc-winning-brand {
+    display: flex;
+    position: relative;
+
+    h2 {
+      z-index: 1;
+      margin: 200px 0 510px 165px;
+      max-width: 540px;
+      color: variables.$primary--text-black--cl;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 114.286%;
+    }
+    &__description {
+      position: absolute;
+      right: 0;
+      margin-top: -200px;
+      background-color: variables.$primary--red--cl;
+
+      h2 {
+        display: none;
+      }
+
+      &__brands {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        margin: 200px 105px 200px 285px;
+        color: variables.$primary--white--cl;
+
+        div {
+          span {
+            font-size: 80px;
+            font-weight: 800;
+            line-height: 110%;
+            opacity: 0.25;
+          }
+          div {
+            margin-top: -50px;
+            margin-left: 60px;
+            max-width: 445px;
+            span {
+              font-size: 20px;
+              font-weight: 800;
+              line-height: 160%;
+              opacity: 1;
+            }
+            p {
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 177.778%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__sc-slides {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin-top: -93px;
+
+    .connector2 {
+      z-index: 2;
+      position: absolute;
+      right: 630px;
+      top: 180px;
+    }
+
+    &__brand-naming {
+      position: absolute;
+      z-index: 1;
+      background-color: variables.$primary--BG-black--cl;
+      padding: 152px 125px 152px 165px;
+      left: 0;
+
+      h2 {
+        color: variables.$primary--white--cl;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 114.286%;
+        max-width: 440px;
+      }
+      .button-group {
+        margin-top: 50px;
+        display: flex;
+        gap: 16px;
+
+        button {
+          width: 40px;
+          border: 1px solid variables.$primary--red--cl;
+          border-radius: 50%;
+
+          img {
+            width: 40px;
+          }
+        }
+        button:hover {
+          border-color: #ff9393;
+        }
+      }
+    }
+    .desc {
+      position: absolute;
+      right: 154px;
+      bottom: 68px;
+      color: variables.$primary--white--cl;
+      text-align: right;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 177.778%;
+
+      h3 {
+        font-weight: 800;
+      }
+    }
+  }
+  &__sc-build {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+
+    h2 {
+      max-width: 600px;
+      color: variables.$primary--text-black--cl;
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 114.286%;
+    }
+    button {
+      margin-right: 210px;
+      padding: 22px 43px;
+      color: variables.$primary--white--cl;
+      font-size: 15px;
+      font-weight: 800;
+      background-color: variables.$primary--red--cl;
+    }
+    button:hover {
+      background-color: #ff9393;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .logo-and-nav {
+      .cont-img {
+        padding-left: 40px;
+        width: 40%;
+      }
+      nav {
+        padding: 57px 0px 57px 33px;
+        width: 60%;
+        gap: 28px;
+
+        ul {
+          gap: 20px;
+
+          li {
+            a {
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 213.333%;
+              text-decoration: none;
+            }
+          }
+        }
+        button {
+          padding: 22px 18px;
+        }
+      }
+    }
+    .hero {
+      padding-left: 40px;
+      padding-top: 76px;
+      padding-bottom: 150px;
+      background-clip: border-box;
+
+      h1 {
+        max-width: 400px;
+        font-size: 56px;
+        line-height: 100%;
+      }
+      p {
+        margin-top: 20px;
+        max-width: 400px;
+        font-size: 15px;
+        line-height: 166.667%;
+      }
+      button {
+        margin-top: 32px;
+      }
+    }
+  }
+  .main-content {
+    &__sc-design {
+      .connector {
+        width: 64px;
+        margin-top: 145px;
+        margin-right: 40px;
+      }
+
+      picture {
+        width: 48%;
+      }
+
+      &__description {
+        width: 52%;
+        padding: 120px 0 120px 70px;
+        font-size: 15px;
+
+        h2 {
+          max-width: 240px;
+          font-size: 32px;
+          line-height: 125%;
+        }
+        p {
+          margin-top: 32px;
+          max-width: 280px;
+          line-height: 166.667%;
+        }
+        button {
+          margin-top: 32px;
+        }
+      }
+    }
+    &__sc-winning-brand {
+      h2 {
+        margin: 125px 0 430px 40px;
+        max-width: 280px;
+        font-size: 30px;
+        line-height: 125%;
+      }
+      &__description {
+        width: 58%;
+        margin-top: -100px;
+
+        &__brands {
+          gap: 40px;
+          margin: 120px 20px 120px 20px;
+          color: variables.$primary--white--cl;
+
+          div {
+            span {
+              font-size: 80px;
+              line-height: 110%;
+              opacity: 0.25;
+            }
+            div {
+              margin-top: -50px;
+              margin-left: 60px;
+              max-width: 300px;
+              span {
+                font-size: 14px;
+                line-height: 166.667%;
+                opacity: 1;
+              }
+              p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 166.667%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__sc-slides {
+      .connector2 {
+        width: 64px;
+        right: 360px;
+        top: 125px;
+      }
+
+      &__brand-naming {
+        padding: 100px 70px 100px 40px;
+
+        h2 {
+          font-size: 32px;
+          line-height: 125%;
+          max-width: 260px;
+        }
+        .button-group {
+          margin-top: 32px;
+
+          button {
+            width: 40px;
+            border: 1px solid variables.$primary--red--cl;
+            border-radius: 50%;
+
+            img {
+              width: 40px;
+            }
+          }
+        }
+      }
+      .desc {
+        right: 40px;
+        bottom: 45px;
+        font-size: 15px;
+        line-height: 133.333%;
+
+        h3 {
+          font-weight: 800;
+        }
+      }
+    }
+    &__sc-build {
+      padding: 70px 40px 100px 40px;
+
+      img {
+        display: none;
+      }
+
+      h2 {
+        max-width: 380px;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 125%;
+      }
+      button {
+        margin: 0;
+        padding: 22px 43px;
+        color: variables.$primary--white--cl;
+        font-size: 15px;
+        font-weight: 800;
+        background-color: variables.$primary--red--cl;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  header {
+    .logo-and-nav {
+      padding: 40px 24px;
+      .cont-img {
+        padding: 0;
+      }
+      nav {
+        display: none;
+      }
+      .hamburg-menu {
+        display: block;
+      }
+    }
+    .hero {
+      background: none;
+      padding: 0;
+      padding-bottom: 150px;
+      width: 100%;
+
+      .hero-img {
+        display: block;
+      }
+      h1 {
+        padding: 0 24px;
+        padding-top: 56px;
+        font-size: 40px;
+        line-height: 100%;
+      }
+      p {
+        padding: 0 24px;
+        margin-top: 15px;
+        font-size: 15px;
+        line-height: 166.667%;
+      }
+      button {
+        margin: 0 24px;
+        margin-top: 40px;
+      }
+    }
+  }
+  .main-content {
+    &__sc-design {
+      flex-direction: column;
+
+      .connector {
+        width: 64px;
+        margin-left: 24px;
+        top: 40px;
+      }
+
+      picture {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+
+      &__description {
+        width: 100%;
+        padding: 72px 0 72px 24px;
+        font-size: 15px;
+
+        h2 {
+          max-width: 320px;
+          font-size: 32px;
+          line-height: 125%;
+        }
+        p {
+          max-width: 320px;
+          margin-top: 24px;
+          line-height: 166.667%;
+        }
+        button {
+          margin-top: 40px;
+        }
+      }
+    }
+    &__sc-winning-brand {
+      position: static;
+      padding-top: 0;
+      color: variables.$primary--white--cl;
+      h2 {
+        display: none;
+      }
+      &__description {
+        position: static;
+        padding-top: 260px;
+        width: 100%;
+
+        h2 {
+          margin: 0 24px;
+          display: block;
+          text-align: start;
+          max-width: 280px;
+          font-size: 30px;
+          line-height: 125%;
+          color: variables.$primary--white--cl;
+        }
+
+        &__brands {
+          gap: 40px;
+          margin: 0 24px 96px 24px;
+
+          div {
+            span {
+              font-size: 80px;
+              line-height: 110%;
+              opacity: 0.25;
+            }
+            div {
+              margin-top: -45px;
+              margin-left: 20px;
+              max-width: 280px;
+              span {
+                font-size: 14px;
+                line-height: 166.667%;
+                opacity: 1;
+              }
+              p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 166.667%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__sc-slides {
+      margin: 0;
+      position: relative;
+      flex-direction: column-reverse;
+
+      .connector2 {
+        display: none;
+      }
+
+      &__brand-naming {
+        position: static;
+        padding: 100px 70px 100px 40px;
+
+        h2 {
+          font-size: 32px;
+          line-height: 125%;
+          max-width: 260px;
+        }
+        .button-group {
+          margin-top: 32px;
+
+          button {
+            width: 40px;
+            border: 1px solid variables.$primary--red--cl;
+            border-radius: 50%;
+
+            img {
+              width: 40px;
+            }
+          }
+        }
+      }
+      .desc {
+        z-index: 1;
+        position: absolute;
+        top: 340px;
+        font-size: 15px;
+        line-height: 133.333%;
+
+        h3 {
+          font-weight: 800;
+        }
+      }
+    }
+    &__sc-build {
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding: 100px 24px;
+      gap: 45px;
+
+      img {
+        display: none;
+      }
+
+      h2 {
+        max-width: 320px;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 125%;
+      }
+      button {
+        margin: 0;
+        padding: 22px 43px;
+        color: variables.$primary--white--cl;
+        font-size: 15px;
+        font-weight: 800;
+        background-color: variables.$primary--red--cl;
+      }
+    }
+  }
+}
